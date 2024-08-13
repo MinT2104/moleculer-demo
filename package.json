@@ -1,0 +1,58 @@
+{
+  "name": "moleculer-demo",
+  "version": "1.0.0",
+  "description": "My Moleculer-based microservices project",
+  "scripts": {
+    "dev": "moleculer-runner --repl --hot services/**/*.service.js",
+    "start": "moleculer-runner",
+    "cli": "moleculer connect NATS",
+    "ci": "jest --watch",
+    "test": "jest --coverage",
+    "dc:up": "docker-compose up --build -d",
+    "dc:logs": "docker-compose logs -f",
+    "dc:down": "docker-compose down"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "moleculer-repl": "^0.7.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.3",
+    "bcrypt": "^5.1.1",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.4.5",
+    "formidable": "^3.5.1",
+    "fs": "^0.0.1-security",
+    "googleapis": "^140.0.1",
+    "ioredis": "^5.0.0",
+    "jsdom": "^24.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "moleculer": "^0.14.33",
+    "moleculer-db": "^0.8.25",
+    "moleculer-db-adapter-mongoose": "^0.9.4",
+    "moleculer-web": "^0.10.4",
+    "mongodb": "^6.8.0",
+    "mongoose": "^6.13.0",
+    "multer": "^1.4.5-lts.1",
+    "nats": "^2.7.1",
+    "path": "^0.12.7",
+    "puppeteer": "^23.0.1"
+  },
+  "engines": {
+    "node": ">= 16.x.x"
+  },
+  "jest": {
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "rootDir": "./services",
+    "roots": [
+      "../test"
+    ]
+  }
+}
